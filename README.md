@@ -1,1 +1,1 @@
-## Inside Deep Learning with Rust
+## Inside Deep Learning with Burn
