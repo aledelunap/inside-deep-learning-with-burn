@@ -74,8 +74,8 @@ impl Dataset<ToyItem> for ToyDataset {
 
 impl ToyDataset {
     const START: f32 = 0.0;
-    const END: f32 = 30.0;
-    const N: usize = 1000;
+    const END: f32 = 20.0;
+    const N: usize = 5000;
     const SPLIT: f32 = 0.8;
 
     pub fn train() -> Self {

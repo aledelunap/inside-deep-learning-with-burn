@@ -1,4 +1,3 @@
-mod data;
 mod inference;
 mod model;
 mod training;
@@ -12,7 +11,7 @@ fn main() {
     type ToyAutodiffBackend = Autodiff<ToyBackend>;
 
     let device = burn::backend::wgpu::WgpuDevice::default();
-    let artifact_dir = "data/toy_artifacts";
+    let artifact_dir = "examples/2-1-neural-networks-as-optimization/toy_artifacts";
     training::train::<ToyAutodiffBackend>(
         artifact_dir,
         training::TrainingConfig::new(ModelConfig::new(1, 1), AdamConfig::new()),

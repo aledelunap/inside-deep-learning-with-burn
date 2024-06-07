@@ -14,10 +14,10 @@ use burn::{
     },
 };
 
-use crate::{
-    data::{ToyBatch, ToyBatcher, ToyDataset},
-    model::{Model, ModelConfig},
-};
+use inside_deep_learning_with_burn::toy_data;
+use toy_data::data::{ToyBatch, ToyBatcher, ToyDataset};
+
+use crate::model::{Model, ModelConfig};
 
 impl<B: Backend> Model<B> {
     pub fn forward_regression(

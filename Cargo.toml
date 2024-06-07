@@ -3,6 +3,8 @@ name = "inside-deep-learning-with-burn"
 version = "0.1.0"
 edition = "2021"
 
+[lib]
+
 [dependencies]
 burn = { version = "0.13.2", features = ["dataset", "train", "wgpu"] }
 ndarray = "0.15.6"
