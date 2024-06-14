@@ -7,7 +7,7 @@ use burn::{
 
 #[derive(Module, Debug)]
 pub struct Model<B: Backend> {
-    linear_1: Linear<B>,
+    linear: Linear<B>,
 }
 
 #[derive(Config, Debug)]
@@ -19,7 +19,7 @@ pub struct ModelConfig {
 impl ModelConfig {
     pub fn init<B: Backend>(&self, device: &B::Device) -> Model<B> {
         Model {
-            linear_1: LinearConfig::new(self.in_features, self.out_features).init(device),
+            linear: LinearConfig::new(self.in_features, self.out_features).init(device),
         }
     }
 }
@@ -29,6 +29,6 @@ impl<B: Backend> Model<B> {
     // - x: [batch_size, in_features]
     // - y: [batch_size, out_features]
     pub fn forward(&self, x: Tensor<B, 2>) -> Tensor<B, 2> {
-        self.linear_1.forward(x)
+        self.linear.forward(x)
     }
 }
