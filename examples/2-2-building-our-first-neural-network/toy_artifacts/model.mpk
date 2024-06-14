@@ -1,4 +1,0 @@
-ƒ¨metadata…¥float³half::binary16::f16£int£i16¦formatÙaburn_core::record::file::NamedMpkFileRecorder<burn_core::record::settings::HalfPrecisionSettings>§version¦0.13.2¨settingsµHalfPrecisionSettings¤item‚¨linear_1‚¦weight‚¢idÙ$52943bda-1301-4e8f-8e7c-8c8668fc026a¥param‚¥valuešÍµÍ¹ÍµöÍ5„Íº•Í·ƒÍ:WÍ8°Í5}Í¹ş¥shape’
-¤bias‚¢idÙ$f56ee417-16eb-42b9-96a1-4292608e5f09¥param‚¥valuešÍÁ“ÍGëÍ¿ÄÍD2Í5³ÍH“ÍÄéÍÇ/ÍDhÍ» ¥shape‘
-¨linear_2‚¦weight‚¢idÙ$54585e50-9525-44c5-968b-7d5ff6d078ff¥param‚¥valuešÍ¾vÍÀòÍÀÀÍ@õÍÁÍÄ^ÍAéÍ9<Í@±Í3.¥shape’
-¤bias‚¢idÙ$ae20e241-e964-4c0a-8baa-9ccb9d9f021e¥param‚¥value‘ÍA‹¥shape‘¢_b

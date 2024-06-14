@@ -16,7 +16,7 @@ use burn::{
 
 use crate::model::{Model, ModelConfig};
 use inside_deep_learning_with_burn::toy_data;
-use toy_data::data::{ToyBatch, ToyBatcher, ToyDataset};
+use toy_data::data::{ToyBatch, ToyBatcher, ToyDatasetConfig};
 
 impl<B: Backend> Model<B> {
     pub fn forward_regression(
@@ -78,17 +78,24 @@ pub fn train<B: AutodiffBackend>(artifact_dir: &str, config: TrainingConfig, dev
     let batcher_train = ToyBatcher::<B>::new(device.clone());
     let batcher_test = ToyBatcher::<B::InnerBackend>::new(device.clone());
 
+    let data = ToyDatasetConfig {
+        start: 0.0,
+        end: 20.0,
+        n: 1000,
+        split: 0.9,
+    };
+
     let dataloader_train = DataLoaderBuilder::new(batcher_train)
         .batch_size(config.batch_size)
         .shuffle(config.seed)
         .num_workers(config.num_workers)
-        .build(ToyDataset::train());
+        .build(data.train());
 
     let dataloader_test = DataLoaderBuilder::new(batcher_test)
         .batch_size(config.batch_size)
         .shuffle(config.seed)
         .num_workers(config.num_workers)
-        .build(ToyDataset::test());
+        .build(data.test());
 
     let learner = LearnerBuilder::new(artifact_dir)
         .metric_train_numeric(LossMetric::new())

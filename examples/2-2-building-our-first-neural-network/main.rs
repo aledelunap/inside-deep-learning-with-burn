@@ -20,5 +20,5 @@ fn main() {
         device.clone(),
     );
 
-    inference::infer::<ToyAutodiffBackend>(artifact_dir, device);
+    inference::infer::<ToyBackend>(artifact_dir, device);
 }
