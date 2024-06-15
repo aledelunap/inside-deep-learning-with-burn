@@ -16,7 +16,7 @@ fn main() {
 
     training::train::<MoonsAutodiffBackend>(
         artifact_dir,
-        training::TrainingConfig::new(model::ModelConfig::new(2, 10, 2), AdamConfig::new()),
+        training::TrainingConfig::new(model::ModelConfig::new(2, 30, 2), AdamConfig::new()),
         device.clone(),
     );
 

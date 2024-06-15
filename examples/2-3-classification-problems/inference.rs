@@ -1,7 +1,4 @@
-use std::cmp::Ordering;
-
 use burn::data::dataloader::batcher::Batcher;
-use burn::tensor::ElementComparison;
 use burn::{
     config::Config,
     module::Module,
@@ -19,7 +16,7 @@ use crate::training::TrainingConfig;
 pub fn infer<B: Backend>(artifact_dir: &str, device: B::Device) {
     let mut plot = Plot::new();
 
-    let data = make_moons(100, 100);
+    let data = make_moons(100, 100, 0.01);
 
     let x1: Vec<f32> = data.iter().map(|item| item.x[0]).collect();
     let x2: Vec<f32> = data.iter().map(|item| item.x[1]).collect();

@@ -15,7 +15,7 @@ use burn::{
 };
 
 use inside_deep_learning_with_burn::toy_data::{self, data::ToyDatasetConfig};
-use toy_data::data::{ToyBatch, ToyBatcher, ToyDataset};
+use toy_data::data::{ToyBatch, ToyBatcher, };
 
 use crate::model::{Model, ModelConfig};
 
