@@ -6,7 +6,7 @@ edition = "2021"
 [lib]
 
 [dependencies]
-burn = { version = "0.13.2", features = ["dataset", "train", "wgpu"] }
+burn = { version = "0.13.2", features = ["dataset", "train", "wgpu", "vision"] }
 ndarray = "0.15.6"
 ndarray-rand = "0.14.0"
 plotly = "0.8.4"
