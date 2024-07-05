@@ -8,7 +8,7 @@ use burn::data::dataset::Dataset;
 use burn::optim::AdamConfig;
 
 fn main() {
-    let artifact_dir = "examples/3-4-first-cnn/artifacts/";
+    let artifact_dir = "examples/3-5-pooling/artifacts/";
 
     type MyBackend = Wgpu<AutoGraphicsApi, f32, i32>;
     type MyAutodiffBackend = Autodiff<MyBackend>;
@@ -16,7 +16,7 @@ fn main() {
 
     crate::training::train::<MyAutodiffBackend>(
         artifact_dir,
-        crate::training::TrainingConfig::new(ModelConfig::new(10, 28, 28), AdamConfig::new()),
+        crate::training::TrainingConfig::new(ModelConfig::new(10, 16, 28, 28), AdamConfig::new()),
         device.clone(),
     );
 
