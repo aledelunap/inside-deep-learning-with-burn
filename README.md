@@ -18,7 +18,7 @@ This repository contains the code for the book [Inside Deep Learning](https://ww
 
 <h2 align="center">📖 Contents</h2>
 
-Currently, the repository includes the code for the following chapters:
+Currently, this repository includes the code for the following chapters:
 
 - Chapter 2 Fully connected networks
   - 2.1 Neural networks as optimization
